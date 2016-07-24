@@ -17,8 +17,8 @@ Contains string "LoopMill", space and then version.revision as two decimal digit
     LoopMill 1.0
  
 ##Header
-Contains ReadArgs()-parsable set of project parameters and metadata. List of keywords to be defined later, unknown are ignored.
-To make it more readable, it may be split into several lines, but every such line must be separately parsable (and will be parsed separately to avoid ReadArgs() overflow). An empty line ends the header.
+Contains `ReadArgs()`-parsable set of project parameters and metadata. List of keywords to be defined later, unknown are ignored.
+To make it more readable, it may be split into several lines, but every such line must be separately parsable (and will be parsed separately to avoid `ReadArgs()` overflow). An empty line ends the header.
 
 ##System exclusive messages
 [todo]
