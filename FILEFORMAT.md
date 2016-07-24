@@ -10,18 +10,21 @@ Writer will emit Unix/Amiga style LF. Reader will handle LF, CRLF, CR.
 
 ##First line
 Contains string "LoopMill", space and then version.revision as two decimal digits, no higher than 65535. Example:
- LoopMill 1.0
+
+    LoopMill 1.0
  
 ##Header
 Contains ReadArgs()-parsable set of project parameters and metadata. List of keywords to be defined later, unknown are ignored.
-To make it more readable, it may be split into several lines. An empty line ends the header.
+To make it more readable, it may be split into several lines, but every such line must be separately parsable (and will be parsed separately to avoid ReadArgs() overflow). An empty line ends the header.
 
 ##System exclusive messages
 [todo]
 
 ##Patterns
 Each row is a line. Tracks separated by "|". Entry looks like this:
- D C-4 7F 002 ---- 0736
+
+    D C-4 7F 002 ---- 0736
+
 Columns explanation:
 1. Event (an editor will replace these letters with appropriate icons).
   * D - note on
@@ -35,4 +38,4 @@ Columns explanation:
 5. The first effect. Two hexadecimal digits for effect number, two for parameter.
 6. The second effect. The same as above.
 
-A pattern is ended with an empty line. Number of rows in a pattern is arbitrary, but no higher than 256. Number of tracks in a line *must* be equal to number of tracks defined in the header.
+A pattern is ended with an empty line. Number of rows in a pattern is arbitrary, but no higher than 256. Number of tracks in a line *must* be equal to number of tracks defined in the header. 
