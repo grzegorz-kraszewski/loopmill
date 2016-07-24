@@ -29,6 +29,7 @@ Each row is a line. Tracks separated by "|". Entry looks like this:
     D C-4 7F 002 ---- 0736
 
 Columns explanation:
+
 1. Event (an editor will replace these letters with appropriate icons).
   * D - note on
   * U - note off
