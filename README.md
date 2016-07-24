@@ -5,6 +5,7 @@ MIDI sequencer for (classic) Amiga
 * Memory. Probably 1 MB will be enough, maybe limiting project size a bit.
 * Graphic chipset. I will probably use 8 or 16 colours on a system screen (so all it works also on RTG screen). AGA not required.
 * Kickstart. Well, I will use the system extensively. Kick 3.0 is minimum.
+
 To sum it up, stock A1200 is enough. It also should be practically usable on A500 with system 3.0. Note that hardware requirements for building from sources are higher. Loopmill is built natively on Amiga with 68020 @ 28 MHz and 64 MB fast RAM. Compiler used is native build of GCC 2.95.3.
 * MIDI is handled via camd.library. It handles Amiga serial port, some extensions, as well as USB MIDI on nextgen system.
 * GUI toolkit. Well, MUI is nice, but too slow. I plan to use ProTracker style hand-made GUI.
