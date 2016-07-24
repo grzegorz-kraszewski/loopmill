@@ -8,6 +8,9 @@ Plaintext file, human editable. Rationale:
 ##Line ends
 Writer will emit Unix/Amiga style LF. Reader will handle LF, CRLF, CR.
 
+##Character set
+The format uses ASCII set. Future plan for metadata values is UTF-8, which will be backward compatible (the format core uses ASCII only). For now only ASCII (up to $7F) is allowed in metadata values.
+
 ##First line
 Contains string "LoopMill", space and then version.revision as two decimal digits, no higher than 65535. Example:
 
@@ -38,4 +41,6 @@ Columns explanation:
 5. The first effect. Two hexadecimal digits for effect number, two for parameter.
 6. The second effect. The same as above.
 
-A pattern is ended with an empty line. Number of rows in a pattern is arbitrary, but no higher than 256. Number of tracks in a line *must* be equal to number of tracks defined in the header. 
+A pattern is ended with an empty line. Number of rows in a pattern is arbitrary, but no higher than 256. Number of tracks in a line *must* be equal to number of tracks defined in the header.
+
+Empty columns in an entry are denoted with appropriate number of "-" (ASCII $2D). Columns are separated by plain spaces (ASCII $20).
