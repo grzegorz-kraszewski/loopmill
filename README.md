@@ -3,7 +3,7 @@ MIDI sequencer for (classic) Amiga
 ## System requirements
 * Processor. Plain 68000 @ 7 MHz should be enough for basic use. See no point in 020/030/040/060 compilation.
 * Memory. Probably 1 MB will be enough, maybe limiting project size a bit.
-* Graphic chipset. I will probably use 8 or 16 colours on a system screen (so all it works also on RTG screen). AGA not required.
+* Graphic chipset. I will probably use 8 or 16 colours on a system screen (so all it works also on RTG screen). AGA not required. Minimum screen size: 640 x 256 pixels.
 * Kickstart. Well, I will use the system extensively. Kick 3.0 is minimum.
 
 To sum it up, stock A1200 is enough. It also should be practically usable on A500 with system 3.0. Note that hardware requirements for building from sources are higher. LoopMill is built natively on Amiga with 68020 @ 28 MHz and 64 MB fast RAM. Compiler used is native build of GCC 2.95.3.
