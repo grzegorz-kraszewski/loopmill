@@ -6,8 +6,8 @@ MIDI sequencer for (classic) Amiga
 * Graphic chipset. I will probably use 8 or 16 colours on a system screen (so all it works also on RTG screen). AGA not required.
 * Kickstart. Well, I will use the system extensively. Kick 3.0 is minimum.
 
-To sum it up, stock A1200 is enough. It also should be practically usable on A500 with system 3.0. Note that hardware requirements for building from sources are higher. Loopmill is built natively on Amiga with 68020 @ 28 MHz and 64 MB fast RAM. Compiler used is native build of GCC 2.95.3.
-* MIDI is handled via camd.library. It handles Amiga serial port, some extensions, as well as USB MIDI on nextgen system.
+To sum it up, stock A1200 is enough. It also should be practically usable on A500 with system 3.0. Note that hardware requirements for building from sources are higher. LoopMill is built natively on Amiga with 68020 @ 28 MHz and 64 MB fast RAM. Compiler used is native build of GCC 2.95.3.
+* MIDI is handled via camd.library. It handles Amiga serial port, some extensions, as well as USB MIDI on nextgen systems.
 * GUI toolkit. Well, MUI is nice, but too slow. I plan to use ProTracker style hand-made GUI.
 
 ## Basic ideas
@@ -19,6 +19,6 @@ To sum it up, stock A1200 is enough. It also should be practically usable on A50
 * Event "force", 2 hex characters (00 to 7F). Velocity for notes, pressure for channel pressure and aftertouch.
 * Note. For on/off and aftertouch. Empty for channel pressure.
 * Instrument. 3 hex characters, so 4096 instruments possible. Indirectly covers Program Change and Bank Select controller via user editable maps. Takes care of proper bank/program change sequence. GM[2] map provided by default.
-* Two(?) columns of effects. Each effect has 5 characters. First one determines effect (use also letters, like DigiBooster), four other provide 16 bits for parameter (14 of them used in MIDI). Pitch bend is mapped as effect, most MIDI CC also belongs here, and finally most of traditional tracker effects.
-
-## List of effects
+* Two(?) columns of effects. Each effect has 4 characters. First two are CC number. As there are only 127 CC-s, effects from $80 to $8F may be used to map ProTracker effects where applicable. Last 2 hex digits are used for controller value.
+* How to handle 14-bit controllers? Separately? Extend value to 4 hex digits storing either 2 x 7 bits or one 14-bit number?
+* Pitch bend should be mapped as controller $90.
