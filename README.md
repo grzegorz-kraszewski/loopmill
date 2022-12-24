@@ -1,5 +1,9 @@
 # LoopMill
 MIDI sequencer for (classic) Amiga
+
+## NOTE
+This project has been archived, as I doubt I will have time to work on it.
+
 ## System requirements
 * Processor. Plain 68000 @ 7 MHz should be enough for basic use. See no point in 020/030/040/060 compilation.
 * Memory. Probably 1 MB will be enough, maybe limiting project size a bit.
